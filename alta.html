@@ -3,49 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alta de Equipo</title>
+  <title>Alta de Equipo — Inventario</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">📊 Dashboard</a>
-    <a href="alta.html" class="active">➕ Registro</a>
-    <a href="incidencias.html">⚠️ Incidencias</a>
-    <a href="reportes.html">📋 Reportes</a>
-    <a href="busqueda.html">🔍 Búsqueda</a>
-  </nav>
+<nav>
+  <a href="index.html">📊 Dashboard</a>
+  <a href="alta.html" class="active">➕ Registro</a>
+  <a href="incidencias.html">⚠️ Incidencias</a>
+  <a href="reportes.html">📋 Reportes</a>
+  <a href="busqueda.html">🔍 Búsqueda</a>
+</nav>
 
-  <div class="container">
-    <div class="card">
-      <h2>✨ Alta de Nuevo Equipo</h2>
-      <p>Completa la información para el inventario</p>
+<div class="container">
+  <div class="card">
+    <h2>✨ Alta de Nuevo Equipo</h2>
+    <p>Completa la información para registrarlo en el inventario.</p>
 
-      <form>
-        <label for="tipo">Tipo de Equipo *</label>
-        <select id="tipo">
-          <option value="">-- Seleccionar tipo --</option>
-          <option value="laptop">Laptop</option>
-          <option value="desktop">Desktop</option>
-          <option value="servidor">Servidor</option>
-          <option value="impresora">Impresora</option>
-          <option value="switch">Switch</option>
-        </select>
+    <form>
+      <label for="tipo">Tipo de Equipo *</label>
+      <select id="tipo">
+        <option value="">— Seleccionar tipo —</option>
+        <option value="laptop">💻 Laptop</option>
+        <option value="desktop">🖥️ Desktop</option>
+        <option value="servidor">🗄️ Servidor</option>
+        <option value="impresora">🖨️ Impresora</option>
+        <option value="switch">🔀 Switch</option>
+      </select>
 
-        <label for="serie">Número de Serie *</label>
-        <input type="text" id="serie" placeholder="Ej: ABC123XYZ" />
+      <label for="marca">Marca y Modelo *</label>
+      <input type="text" id="marca" placeholder="Ej: Dell Latitude 5520" />
 
-        <label>Laboratorio *</label>
-        <div class="radio-group">
-          <label><input type="radio" name="lab" value="1" /> Lab 1</label>
-          <label><input type="radio" name="lab" value="2" /> Lab 2</label>
-          <label><input type="radio" name="lab" value="3" /> Lab 3</label>
-        </div>
+      <label for="serie">Número de Serie *</label>
+      <input type="text" id="serie" placeholder="Ej: ABC123XYZ" />
 
-        <button type="submit">🚀 Registrar Equipo</button>
-      </form>
-    </div>
+      <label>Laboratorio *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="lab" value="1" /> Lab 1</label>
+        <label><input type="radio" name="lab" value="2" /> Lab 2</label>
+        <label><input type="radio" name="lab" value="3" /> Lab 3</label>
+      </div>
+
+      <label for="responsable">Responsable</label>
+      <input type="text" id="responsable" placeholder="Nombre del encargado" />
+
+      <button type="submit">🚀 Registrar Equipo</button>
+    </form>
   </div>
+</div>
 
 </body>
 </html>
