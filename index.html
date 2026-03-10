@@ -1,40 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
+
+    <!DOCTYPE html>
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+  </style>
 </head>
 <body>
-    <nav>
-    <a href="index.html">📊 Dashboard</a>
-    <a href="alta.html">➕ Registro</a>
-    <a href="incidencias.html">⚠️ Incidencias</a>
-    <a href="reportes.html">📋 Reportes</a>
-    <a href="busqueda.html">🔍 Busqueda</a>
+
+<nav>
+  <a href="index.html" class="active">📊 Dashboard</a>
+  <a href="alta.html">➕ Registro</a>
+  <a href="incidencias.html">⚠️ Incidencias</a>
+  <a href="reportes.html">📋 Reportes</a>
+  <a href="busqueda.html">🔍 Búsqueda</a>
 </nav>
 
-<div class="container">
-    <h2>Resumen de Inventario</h2>
-    
-    <div class="card" style="border-left-color: var(--accent-blue);">
-        <h3>EQUIPOS TOTALES</h3>
-        <h1 style="font-size: 3rem;">150</h1>
-        <p style="color: #4caf50;">↑ +12% vs mes anterior</p>
+<main class="page">
+
+  <header class="page-header">
+    <p class="label">Panel de Control</p>
+    <h1>Resumen de Inventario</h1>
+    <p>Última actualización: hoy, 09:41 AM &nbsp;·&nbsp; Marzo 2026</p>
+  </header>
+
+  <!-- KPI CARDS -->
+  <div class="cards">
+
+    <div class="card card--blue">
+      <span class="card-icon">🖥️</span>
+      <p class="card-label">Equipos Totales</p>
+      <div class="card-value">150</div>
+      <span class="card-delta up">↑ +12% vs mes anterior</span>
     </div>
 
-    <div class="card" style="border-left-color: #ff9800;">
-        <h3>EN MANTENIMIENTO</h3>
-        <h1 style="font-size: 3rem;">8</h1>
-        <p style="color: #f44336;">↓ -3 esta semana</p>
+    <div class="card card--orange">
+      <span class="card-icon">🔧</span>
+      <p class="card-label">En Mantenimiento</p>
+      <div class="card-value">8</div>
+      <span class="card-delta down">↓ −3 esta semana</span>
     </div>
 
-    <div class="card" style="border-left-color: #f44336;">
-        <h3>EQUIPOS EN FALLA</h3>
-        <h1 style="font-size: 3rem;">12</h1>
-        <p style="color: #4caf50;">↑ +4 hoy</p>
+    <div class="card card--red">
+      <span class="card-icon">⚠️</span>
+      <p class="card-label">Equipos en Falla</p>
+      <div class="card-value">12</div>
+      <span class="card-delta down">↑ +4 hoy</span>
     </div>
-</div>
+
+  </div>
+
+  <!-- QUICK TABLE -->
+  <p class="section-title">ÚLTIMAS INCIDENCIAS</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Equipo</th>
+          <th>Tipo</th>
+          <th>Responsable</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PC-087</td>
+          <td>Laptop</td>
+          <td>Carlos Mendez</td>
+          <td><span class="badge badge-ok">Operativo</span></td>
+        </tr>
+        <tr>
+          <td>SRV-003</td>
+          <td>Servidor</td>
+          <td>Ana Torres</td>
+          <td><span class="badge badge-warn">Mantenimiento</span></td>
+        </tr>
+        <tr>
+          <td>IMP-021</td>
+          <td>Impresora</td>
+          <td>Luis Ramírez</td>
+          <td><span class="badge badge-danger">Falla</span></td>
+        </tr>
+        <tr>
+          <td>PC-104</td>
+          <td>Desktop</td>
+          <td>María López</td>
+          <td><span class="badge badge-warn">Mantenimiento</span></td>
+        </tr>
+        <tr>
+          <td>NET-009</td>
+          <td>Switch</td>
+          <td>Jorge Vega</td>
+          <td><span class="badge badge-ok">Operativo</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
 </body>
 </html>
