@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+    <a href="index.html">📊 Dashboard</a>
+    <a href="alta.html">➕ Registro</a>
+    <a href="incidencias.html">⚠️ Incidencias</a>
+    <a href="reportes.html">📋 Reportes</a>
+    <a href="busqueda.html">🔍 Busqueda</a>
+</nav>
+<div class="container">
+    <div class="card">
+        <h2>⚠️ Reportar un Problema</h2>
+        <p style="color: var(--text-dim)">Cuéntanos qué falló para que el equipo técnico pueda ayudarte.</p>
+        
+        <form>
+            <label>1. ¿Qué equipo falló? *</label>
+            <input type="text" placeholder="Escribe el nombre o escanea el código QR...">
+            
+            <label style="display: block; margin-top: 15px;">2. ¿Qué tipo de falla es? *</label>
+            <select>
+                <option>Selecciona una opción...</option>
+                <option>No enciende</option>
+                <option>Pantalla rota / Daño físico</option>
+                <option>Software / Virus / Contraseña</option>
+                <option>Falta de periféricos (Mouse/Teclado)</option>
+            </select>
+
+            <label style="display: block; margin-top: 15px;">3. Descripción detallada</label>
+            <textarea rows="4" placeholder="Ej: La laptop se apaga sola a los 5 minutos de uso..."></textarea>
+
+            <label style="display: block; margin-top: 15px;">4. Evidencia (Foto)</label>
+            <div style="border: 2px dashed #444; padding: 20px; text-align: center; border-radius: 8px;">
+                <input type="file" id="file" style="display: none;">
+                <label for="file" style="cursor: pointer; color: var(--primary)">+ Subir foto o nota</label>
+            </div>
+
+            <button type="submit" class="btn-primary" style="margin-top: 20px;">ENVIAR REPORTE AHORA</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

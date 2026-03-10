@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+    <a href="index.html">📊 Dashboard</a>
+    <a href="alta.html">➕ Registro</a>
+    <a href="incidencias.html">⚠️ Incidencias</a>
+    <a href="reportes.html">📋 Reportes</a>
+    <a href="busqueda.html">🔍 Busqueda</a>
+</nav>
+    <div class="container">
+    <div class="card" style="background: linear-gradient(145deg, #1e1e1e, #2a1a4a);">
+        <h2 style="text-align:center;">✨ Alta de Nuevo Equipo</h2>
+        <p style="text-align:center; color: var(--text-gray);">Completa la información para el inventario</p>
+        
+        <form>
+            <label>TIPO DE EQUIPO *</label>
+            <select><option>Seleccionar tipo --</option></select>
+            
+            <label>NÚMERO DE SERIE *</label>
+            <input type="text" placeholder="Ej: ABC123XYZ">
+            
+            <label>LABORATORIO *</label>
+            <div style="display:flex; gap: 10px; margin: 10px 0;">
+                <input type="radio" name="lab"> Lab 1
+                <input type="radio" name="lab"> Lab 2
+                <input type="radio" name="lab"> Lab 3
+            </div>
+            
+            <button type="submit">🚀 REGISTRAR EQUIPO</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

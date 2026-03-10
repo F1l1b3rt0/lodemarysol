@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+    <a href="index.html">📊 Dashboard</a>
+    <a href="alta.html">➕ Registro</a>
+    <a href="incidencias.html">⚠️ Incidencias</a>
+    <a href="reportes.html">📋 Reportes</a>
+    <a href="busqueda.html">🔍 Busqueda</a>
+</nav>
+<div class="container">
+    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+        <div class="card" style="flex: 1; text-align: center; border-bottom: 4px solid var(--success);">
+            <small>Operativos</small>
+            <h1 style="margin: 5px 0;">142</h1>
+        </div>
+        <div class="card" style="flex: 1; text-align: center; border-bottom: 4px solid var(--danger);">
+            <small>En Falla</small>
+            <h1 style="margin: 5px 0; color: var(--danger);">8</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3>Lista de Inventario</h3>
+            <button style="background: #3b82f6; color: white; border: none; padding: 8px 15px; border-radius: 5px;">⬇ Descargar PDF</button>
+        </div>
+        
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <thead>
+                <tr style="text-align: left; color: var(--text-dim); border-bottom: 1px solid #333;">
+                    <th style="padding: 10px;">Equipo</th>
+                    <th>Lab</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #2d2d2d;">
+                    <td style="padding: 15px;">Laptop HP Pavilion</td>
+                    <td>Lab 2</td>
+                    <td><span style="color: var(--success)">● Operativo</span></td>
+                    <td><a href="#" style="color: var(--primary)">Ver detalles</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #2d2d2d; background: rgba(239, 68, 68, 0.05);">
+                    <td style="padding: 15px;">Proyector Epson</td>
+                    <td>Lab 3</td>
+                    <td><span style="color: var(--danger)">● En Falla</span></td>
+                    <td><a href="#" style="color: var(--primary)">Ver historial</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
