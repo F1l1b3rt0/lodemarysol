@@ -1,41 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alta de Equipo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
+
+  <nav>
     <a href="index.html">📊 Dashboard</a>
-    <a href="alta.html">➕ Registro</a>
+    <a href="alta.html" class="active">➕ Registro</a>
     <a href="incidencias.html">⚠️ Incidencias</a>
     <a href="reportes.html">📋 Reportes</a>
-    <a href="busqueda.html">🔍 Busqueda</a>
-</nav>
-    <div class="container">
-    <div class="card" style="background: linear-gradient(145deg, #1e1e1e, #2a1a4a);">
-        <h2 style="text-align:center;">✨ Alta de Nuevo Equipo</h2>
-        <p style="text-align:center; color: var(--text-gray);">Completa la información para el inventario</p>
-        
-        <form>
-            <label>TIPO DE EQUIPO *</label>
-            <select><option>Seleccionar tipo --</option></select>
-            
-            <label>NÚMERO DE SERIE *</label>
-            <input type="text" placeholder="Ej: ABC123XYZ">
-            
-            <label>LABORATORIO *</label>
-            <div style="display:flex; gap: 10px; margin: 10px 0;">
-                <input type="radio" name="lab"> Lab 1
-                <input type="radio" name="lab"> Lab 2
-                <input type="radio" name="lab"> Lab 3
-            </div>
-            
-            <button type="submit">🚀 REGISTRAR EQUIPO</button>
-        </form>
+    <a href="busqueda.html">🔍 Búsqueda</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h2>✨ Alta de Nuevo Equipo</h2>
+      <p>Completa la información para el inventario</p>
+
+      <form>
+        <label for="tipo">Tipo de Equipo *</label>
+        <select id="tipo">
+          <option value="">-- Seleccionar tipo --</option>
+          <option value="laptop">Laptop</option>
+          <option value="desktop">Desktop</option>
+          <option value="servidor">Servidor</option>
+          <option value="impresora">Impresora</option>
+          <option value="switch">Switch</option>
+        </select>
+
+        <label for="serie">Número de Serie *</label>
+        <input type="text" id="serie" placeholder="Ej: ABC123XYZ" />
+
+        <label>Laboratorio *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="lab" value="1" /> Lab 1</label>
+          <label><input type="radio" name="lab" value="2" /> Lab 2</label>
+          <label><input type="radio" name="lab" value="3" /> Lab 3</label>
+        </div>
+
+        <button type="submit">🚀 Registrar Equipo</button>
+      </form>
     </div>
-</div>
+  </div>
+
 </body>
 </html>
