@@ -1,41 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Búsqueda — Inventario</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <nav>
-    <a href="index.html">📊 Dashboard</a>
-    <a href="alta.html">➕ Registro</a>
-    <a href="incidencias.html">⚠️ Incidencias</a>
-    <a href="reportes.html">📋 Reportes</a>
-    <a href="busqueda.html">🔍 Busqueda</a>
-</nav>
-<div class="container">
-    <div class="card">
-        <h2>🔍 Buscador de Equipos</h2>
-        <div style="display: flex; gap: 10px;">
-            <input type="text" placeholder="Marca, Serie o ID del equipo...">
-            <button class="btn-primary" style="width: auto;">BUSCAR</button>
-        </div>
-    </div>
 
-    <div class="card" style="border-left: 5px solid var(--success); display: flex; align-items: center; gap: 20px;">
-        <div style="font-size: 40px;">💻</div>
-        <div style="flex-grow: 1;">
-            <h3 style="margin: 0;">Laptop Dell Latitude</h3>
-            <p style="margin: 5px 0; font-size: 14px; color: var(--text-dim);">Serie: ABC123XYZ | Ubicación: <b>Laboratorio 1</b></p>
-            <span style="background: rgba(34, 197, 94, 0.2); color: var(--success); padding: 4px 10px; border-radius: 20px; font-size: 12px;">OPERATIVO</span>
-        </div>
-        <div>
-            <button style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 8px; border-radius: 5px; cursor: pointer;">
-                Generar Reporte
-            </button>
-        </div>
+<nav>
+  <a href="index.html">📊 Dashboard</a>
+  <a href="alta.html">➕ Registro</a>
+  <a href="incidencias.html">⚠️ Incidencias</a>
+  <a href="reportes.html">📋 Reportes</a>
+  <a href="busqueda.html" class="active">🔍 Búsqueda</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🔍 Buscador de Equipos</h2>
+    <p>Busca por marca, número de serie o ID del equipo.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Marca, Serie o ID del equipo..." />
+      <button type="button">Buscar</button>
     </div>
+  </div>
+
+  <!-- Resultado ejemplo -->
+  <div class="card result-card">
+    <div class="icon">💻</div>
+    <div class="info">
+      <h3>Laptop Dell Latitude</h3>
+      <p>Serie: ABC123XYZ &nbsp;|&nbsp; Ubicación: <strong>Laboratorio 1</strong></p>
+      <span class="badge badge-ok">Operativo</span>
+    </div>
+    <div class="actions">
+      <button type="button">Generar Reporte</button>
+    </div>
+  </div>
+
+  <div class="card result-card" style="border-left-color: var(--danger);">
+    <div class="icon">🖨️</div>
+    <div class="info">
+      <h3>Impresora Epson L3250</h3>
+      <p>Serie: EPX-7741B &nbsp;|&nbsp; Ubicación: <strong>Laboratorio 3</strong></p>
+      <span class="badge badge-danger">Falla</span>
+    </div>
+    <div class="actions">
+      <button type="button">Ver Historial</button>
+    </div>
+  </div>
+
 </div>
+
 </body>
 </html>
