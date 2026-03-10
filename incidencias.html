@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incidencias — Inventario</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
 </head>
 <body>
-        <nav>
-    <a href="index.html">📊 Dashboard</a>
-    <a href="alta.html">➕ Registro</a>
-    <a href="incidencias.html">⚠️ Incidencias</a>
-    <a href="reportes.html">📋 Reportes</a>
-    <a href="busqueda.html">🔍 Busqueda</a>
+
+<nav>
+  <a href="index.html">📊 Dashboard</a>
+  <a href="alta.html">➕ Registro</a>
+  <a href="incidencias.html" class="active">⚠️ Incidencias</a>
+  <a href="reportes.html">📋 Reportes</a>
+  <a href="busqueda.html">🔍 Búsqueda</a>
 </nav>
+
 <div class="container">
-    <div class="card">
-        <h2>⚠️ Reportar un Problema</h2>
-        <p style="color: var(--text-dim)">Cuéntanos qué falló para que el equipo técnico pueda ayudarte.</p>
-        
-        <form>
-            <label>1. ¿Qué equipo falló? *</label>
-            <input type="text" placeholder="Escribe el nombre o escanea el código QR...">
-            
-            <label style="display: block; margin-top: 15px;">2. ¿Qué tipo de falla es? *</label>
-            <select>
-                <option>Selecciona una opción...</option>
-                <option>No enciende</option>
-                <option>Pantalla rota / Daño físico</option>
-                <option>Software / Virus / Contraseña</option>
-                <option>Falta de periféricos (Mouse/Teclado)</option>
-            </select>
+  <div class="card">
+    <h2>⚠️ Reportar un Problema</h2>
+    <p>Cuéntanos qué falló para que el equipo técnico pueda ayudarte.</p>
 
-            <label style="display: block; margin-top: 15px;">3. Descripción detallada</label>
-            <textarea rows="4" placeholder="Ej: La laptop se apaga sola a los 5 minutos de uso..."></textarea>
+    <form>
+      <label for="equipo">1. ¿Qué equipo falló? *</label>
+      <input type="text" id="equipo" placeholder="Escribe el nombre o escanea el código QR..." />
 
-            <label style="display: block; margin-top: 15px;">4. Evidencia (Foto)</label>
-            <div style="border: 2px dashed #444; padding: 20px; text-align: center; border-radius: 8px;">
-                <input type="file" id="file" style="display: none;">
-                <label for="file" style="cursor: pointer; color: var(--primary)">+ Subir foto o nota</label>
-            </div>
+      <label for="tipo-falla">2. ¿Qué tipo de falla es? *</label>
+      <select id="tipo-falla">
+        <option value="">Selecciona una opción...</option>
+        <option>No enciende</option>
+        <option>Pantalla rota / Daño físico</option>
+        <option>Software / Virus / Contraseña</option>
+        <option>Falta de periféricos (Mouse / Teclado)</option>
+        <option>Otro</option>
+      </select>
 
-            <button type="submit" class="btn-primary" style="margin-top: 20px;">ENVIAR REPORTE AHORA</button>
-        </form>
-    </div>
+      <label for="descripcion">3. Descripción detallada</label>
+      <textarea id="descripcion" rows="4" placeholder="Ej: La laptop se apaga sola a los 5 minutos de uso..."></textarea>
+
+      <label>4. Evidencia (Foto)</label>
+      <div class="file-drop">
+        <input type="file" id="file-upload" accept="image/*" />
+        <label for="file-upload">📎 Subir foto o nota</label>
+        <p>PNG, JPG o PDF — máx. 10 MB</p>
+      </div>
+
+      <button type="submit">📤 Enviar Reporte Ahora</button>
+    </form>
+  </div>
 </div>
+
 </body>
 </html>
